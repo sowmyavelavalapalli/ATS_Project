@@ -4,7 +4,7 @@ from google import genai
 
 app=Flask(__name__)
 
-client = genai.Client(api_key="AIzaSyC3P1QqZkzkp6jC2E_QkA5j1zNkj4-h9EA")
+client = genai.Client(api_key="")
 
 def extract_text_from_pdf(pdf_path):
     extracted_text = ""
@@ -30,5 +30,6 @@ def chat():
     )
 
     return jsonify({"reply": response.text})
+
 
 app.run(port=8080)
